@@ -2,11 +2,13 @@ import React from "react";
 import { Stack, Box } from "@mui/material";
 import { VideoCard, ChannelCard } from "./";
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos,direction }) => {
+
+
   // console.log(videos);
- 
+ if(!videos?.length) return'loading...';
   return (
-    <Stack direction={"row"} flexWrap={"wrap"} justifyContent={"start"} gap={2}>
+    <Stack direction={direction|| "row"} flexWrap={"wrap"} justifyContent={"start"} gap={2}>
       {videos.map((item, idk) => (
         <Box key={idk}>
           {item.id.videoId && <VideoCard video={item} />}

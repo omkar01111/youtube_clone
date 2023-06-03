@@ -2,7 +2,7 @@ import React from "react";
 import { categories } from "../utils/constants";
 import { Stack } from "@mui/material";
 
-const selectedCategory = "New";
+// const selectedCategory = "New";
 
 const SideBar = ({ selectedCategory, setSelectedCategory }) => {
   return (
